@@ -1,5 +1,3 @@
-import "./App.css";
-import Chart from "./components/Chart/Chart";
 import Header from "./components/Header/Header";
 import InputArea from "./components/InputArea/InputArea";
 
