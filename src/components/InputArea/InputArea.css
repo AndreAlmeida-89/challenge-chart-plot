@@ -1,0 +1,10 @@
+footer{
+  display: flex;
+  background-color: #DDDEE1;
+  height: 100px;
+  align-items: center;
+}
+
+.button {
+  margin-left: 20px;
+}

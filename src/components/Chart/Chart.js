@@ -8,18 +8,18 @@ import {
   XAxis,
   YAxis,
 } from "recharts";
-import dataJson from "../../data.json";
 import getRandomColor from "../../fuctions/getRandomColor";
 import selectData from "../../fuctions/selectData";
 import './Chart.css'
 
-const selectedData = selectData(dataJson);
-const mockData = [selectedData.begin, selectedData.end];
-const configs = selectedData.configs;
-console.log(mockData);
-console.log(configs);
 
-const Chart = () => {
+
+const Chart = (props) => {
+  const json = JSON.parse(props.json)
+  const selectedData = selectData(json);
+  const mockData = [selectedData.begin, selectedData.end];
+  const configs = selectedData.configs;
+  
   return (
     <LineChart
       width={1000}

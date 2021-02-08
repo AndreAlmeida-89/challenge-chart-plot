@@ -1,15 +1,16 @@
 import getMetaData from "./getMetaData";
 import getData from "./getData";
+import getHours from "./getHours";
 
 const selectData = (json) => {
   const data = getData(json);
   const metaData = getMetaData(json);
 
   let begin = {
-    time: metaData.begin,
+    time: getHours(metaData.begin),
   };
   let end = {
-    time: metaData.end,
+    time: getHours(metaData.end),
   };
   let configs = [];
   data.forEach((element) => {
